@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300&display=swap');
+
+// VARIABLES
+$haeder-bg:#2c2f36;
+$footer-bg:#32353a;
+$white:#fff;
+
+
+
+
+// RESET CSS
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+h1,h2,h3,h4,h5,h6,ul,li,p,a,em,blockquote{
+    margin: 0;
+    padding: 0;
+    font-size:100%;
+    font-style: normal;
+    font-weight: normal;
+    color:inherit;
+    text-decoration: none;
+    line-height: 1;
+}
+img{
+    vertical-align: top;
+}
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+@mixin header-footer ($color) {
+    text-align: center;
+    background: $color;
+}
+
+
+// TYPOGRAPHY
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size:18px;
+}
+
+// HEADER
+header {
+    @include header-footer($haeder-bg);
+    text-transform: uppercase;
+    .logo a{
+        font-size:24px;
+        line-height: 80px;
+        color:$white;
+        em {
+            font-weight: 700;
+        }
+    }
+}
+
+
+// SLOGAN
+.slogan {
+    padding:108px 0 98px;
+    background: #e2e2e2;
+    img{
+        width: 100%;
+    }
+    h2{
+        font-size:50px;
+        color:#11262e;
+    }
+    p{
+        margin: 24px 0 40px;
+        font-size:28px;
+        line-height: 37px;
+        color:#11262e;
+    }
+    a{
+        display: inline-block;
+        padding:0 60px;
+        font-size:28px;
+        line-height: 70px;
+        color:#fff;
+        border-radius: 4px;
+        background: #00c494;
+    }
+}
+
+
+// TESTIMONIAL
+.testimonial {
+    padding:52px 0;
+    text-align: center;
+    background: #f0f0f0;
+    blockquote {
+        color:#000;
+        p{
+            font-size:28px;
+            line-height: 27px;
+        }
+        small{
+            font-size:19px;
+            font-style: italic;
+            line-height: 27px;
+        }
+    }
+}
+
+
+// DEVICE
+.device {
+    padding:98px 0 215px;
+    h3{
+        margin-bottom: 26px;
+        font-size:35px;
+        color:#2c2f36;
+    }
+    p{
+        line-height: 27px;
+    }
+    .device_img {
+        position: relative;
+        img{
+            position: absolute;
+            left: 70px;
+            opacity: 0;
+            &.phone{
+                margin-top: 75px;
+                &.animate{
+                    transform: translate(11.5em);
+                    opacity: 1;
+                }
+            }
+            &.monitor{
+                &.animate{
+                    transform: translate(3em);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+// FEATURES
+
+
+
+// LOCATION
+
+
+
+// FOOTER
+footer {
+    @include header-footer($footer-bg);
+    h2{
+        line-height: 80px;
+        font-size:24px;
+        color:$white;
+        text-transform: uppercase;
+    }
+}
+
+// ANIMATION 
+.animate {
+    animation: fadeIn 1s forwards ease-in;
+    transition: 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
