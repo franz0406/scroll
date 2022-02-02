@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.bak.css">
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <!-- <script src="./js/noframework.waypoints.min.js"></script> -->
+    <!-- <script src="./js/script.js"></script> -->
+    <!-- <script src="js/waypoints.js"></script> -->
+    <script src="./js/scrolltrigger.js"></script>
     <title>Pure Cloud Host</title>
 </head>
 <body>
@@ -38,7 +42,7 @@
             </blockquote>
         </section> <!--testimonial section ends-->
 
-        <section class="device container">
+        <section class="device container" data-scroll>
             <h2 class="hidden">device</h2>
             <div class="row">
                 <div class="col-md-4 offset-md-1">
@@ -52,19 +56,19 @@
             </div>
         </section> <!--device section ends-->
 
-        <section class="fearures">
+        <section class="fearures" data-trigger>
             <h2 class="hidden">fearures</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col">
+                    <div class="col item">
                         <img src="./images/feature_icon_speed.png" alt="speed">
                         <h4>speed</h4>
                     </div>
-                    <div class="col">
+                    <div class="col item">
                         <img src="./images/feature_icon_support.png" alt="support">
                         <h4>support</h4>
                     </div>
-                    <div class="col">
+                    <div class="col item">
                         <img src="./images/feature_icon_smart.png" alt="smart">
                         <h4>smart</h4>
                     </div>
@@ -72,7 +76,7 @@
             </div>
         </section> <!--fearures section ends-->
 
-        <section class="location">
+        <section class="location" data-trigger>
             <div class="striptes">
                 <span class="stripe" id="s1"></span>
                 <span class="stripe" id="s2"></span>
@@ -84,8 +88,6 @@
                 <span class="stripe" id="s8"></span>
                 <span class="stripe" id="s9"></span>
                 <span class="stripe" id="s10"></span>
-                <span class="stripe" id="s11"></span>
-                <span class="stripe" id="s12"></span>
             </div>
             <div class="container contents">
                 <div class="row">

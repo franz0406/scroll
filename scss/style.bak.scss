@@ -133,17 +133,21 @@ header {
             opacity: 0;
             &.phone{
                 margin-top: 75px;
-                &.animate{
-                    transform: translate(11.5em);
-                    opacity: 1;
-                }
             }
-            &.monitor{
-                &.animate{
-                    transform: translate(3em);
-                    opacity: 1;
-                }
-            }
+        }
+    }
+    &.animate-in{
+        .phone {
+            animation: fadeIn 1s forwards ease-in;
+            transition: 2s ease-in-out;
+            transform: translate(11.5em);
+            opacity: 1;
+        }
+        .monitor {
+            animation: fadeIn 1s forwards ease-in;
+            transition: 2s ease-in-out;
+            transform: translate(3em);
+            opacity: 1;
         }
     }
 }
@@ -158,10 +162,6 @@ header {
         img{
             width: 0;
             height: 0;
-            &.grow_img{
-                width: 169px;
-                height: 169px;
-            }
         }
         h4{
             margin-top: 15px;
@@ -169,6 +169,19 @@ header {
             color:#2c2f36;
             text-transform:uppercase;
             opacity: 0;
+        }
+    }
+    &.animate-in {
+        img{
+            animation: fadeIn 1s forwards ease-in;
+            transition: 1s ease-in-out;
+            width: 169px;
+            height: 169px;
+        }
+        h4{
+            animation: fadeIn 1s forwards ease-in;
+            transition: 2s ease-in-out;
+            opacity: 1;
         }
     }
 }
@@ -187,16 +200,16 @@ header {
                 height: 512px;
             }
         }
-        #s1{ background: #2c2f36; }
-        #s2{ background: #444850; }
-        #s3{ background: #36383c; }
-        #s4{ background: #1e2026; }
-        #s5{ background: #444850; }
-        #s6{ background: #2b2d30; }
-        #s7{ background: #212326; }
-        #s8{ background: #36383c; }
-        #s9{ background: #444850; }
-        #s10{ background: #2c2f36; }
+        #s1{ background: #2c2f36; transition-delay: 0.1s;}
+        #s2{ background: #444850; transition-delay: 0.2s;}
+        #s3{ background: #36383c; transition-delay: 0.3s;}
+        #s4{ background: #1e2026; transition-delay: 0.4s;}
+        #s5{ background: #444850; transition-delay: 0.5s;}
+        #s6{ background: #2b2d30; transition-delay: 0.6s;}
+        #s7{ background: #212326; transition-delay: 0.7s;}
+        #s8{ background: #36383c; transition-delay: 0.8s;}
+        #s9{ background: #444850; transition-delay: 0.9s;}
+        #s10{ background: #2c2f36; transition-delay: 1s;}
     }
     .contents {
         position: absolute;
@@ -225,15 +238,14 @@ header {
             line-height: 37px;
         }
     }
+    &.animate-in{
+        .stripe{
+            animation: fadeIn 1s forwards ease-in;
+            transition: 2s ease-in-out;
+            height: 512px;
+        }
+    }
 }
-
-.visible, .invisible {
-    opacity: 0.0;
-    transition: opacity 0.5s ease;
-  }
-  .visible {
-    opacity: 1.0;
-  }
 
 // FOOTER
 footer {
@@ -247,10 +259,6 @@ footer {
 }
 
 // ANIMATION 
-.animate, .grow_img , .animate_down{
-    animation: fadeIn 1s forwards ease-in;
-    transition: 2s ease-in-out;
-}
 
 @keyframes rotate {
     from { transform:translate(-50%, -50%) rotate(0deg) }
